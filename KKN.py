@@ -54,7 +54,7 @@ y_combined = np.hstack((y_train, y_test))
 X_train_m, X_test_m, y_train_m, y_test_m = train_test_split(X_moons, y_moons, test_size=0.3, random_state=1)
 
 # Define the list of k values to try
-neighbors_settings = [1, 3, 5, 7, 9]
+neighbors_settings = [1, 5, 10]
 
 for k in neighbors_settings:
     knn = KNeighborsClassifier(n_neighbors=5, p=1, metric='minkowski')  # Manhattan distance
